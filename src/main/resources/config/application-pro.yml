@@ -1,0 +1,9 @@
+server:
+  port: 8081
+  context-path: /api
+logging:
+  level:
+    root: info
+    com.fu: info
+  file: logs/my.log
+
