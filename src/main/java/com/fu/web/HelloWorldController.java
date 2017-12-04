@@ -1,9 +1,5 @@
 package com.fu.web;
 
-import com.fu.pojo.Book;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -30,8 +26,8 @@ public class HelloWorldController {
 //    @Value("${book.description}")
 //    private String description;
 
-    @Autowired
-    private Book book;
+//    @Autowired
+//    private Book book;
 
     //    @RequestMapping(value = "/say",method = RequestMethod.GET)
     @PostMapping("/say")
@@ -85,7 +81,8 @@ public class HelloWorldController {
 //        book.put("isbn", "2321321312");
 //        book.put("author", "付强");
 //        book.put("uaername", username);
-        return book;
+//        return book;
+        return null;
     }
 
     @RequestMapping("/books")

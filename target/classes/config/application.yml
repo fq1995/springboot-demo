@@ -1,7 +1,7 @@
 
 spring:
   profiles:
-    active: pro
+    active: dev
 
 book:
   name: 我的世界
@@ -9,4 +9,4 @@ book:
   isbn: ${random.uuid}
   description: ${book.name}, 这本书还不错
 
-# yml文件命名格式 application-{name}.yml
+# 配置文件yml文件命名格式 application-{name}.yml
