@@ -24,16 +24,19 @@ public class BookApp {
     }
 
     @PostMapping("/books")
-    public Book post(@RequestParam String name,
-                     @RequestParam String author,
-                     @RequestParam String description,
-                     @RequestParam int status){
-        Book book = new Book();
-        book.setAuthor(author);
-        book.setDescription(description);
-        book.setName(name);
-        book.setStatus(status);
-
+//    public Book post(@RequestParam String name,
+//                     @RequestParam String author,
+//                     @RequestParam String description,
+//                     @RequestParam int status){
+//        Book book = new Book();
+//        book.setAuthor(author);
+//        book.setDescription(description);
+//        book.setName(name);
+//        book.setStatus(status);
+//
+//        return bookService.save(book);
+//    }
+    public Book post(Book book){
         return bookService.save(book);
     }
 
