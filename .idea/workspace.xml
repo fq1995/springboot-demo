@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c90d2f-bce6-4845-a13b-eb8a46231c23" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fu/controller/BookApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/fu/controller/BookApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fu/repository/BookRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/fu/repository/BookRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fu/service/BookService.java" afterPath="$PROJECT_DIR$/src/main/java/com/fu/service/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fu/service/impl/BookServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/fu/service/impl/BookServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,8 +85,8 @@
       <file leaf-file-name="BookApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fu/controller/BookApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+            <state relative-caret-position="116">
+              <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1166#1167#0" expanded="true" />
@@ -257,8 +255,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="314" />
-    <option name="y" value="27" />
+    <option name="x" value="550" />
+    <option name="y" value="61" />
     <option name="width" value="1378" />
     <option name="height" value="727" />
   </component>
@@ -1006,12 +1004,12 @@
       <workItem from="1512282970996" duration="7142000" />
       <workItem from="1512391005049" duration="4703000" />
       <workItem from="1512477876860" duration="6432000" />
-      <workItem from="1512564969895" duration="2642000" />
+      <workItem from="1512564969895" duration="2682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40065000" />
+    <option name="totallyTimeSpent" value="40105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1023,7 +1021,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="314" y="27" width="1378" height="727" extended-state="0" />
+    <frame x="550" y="61" width="1378" height="727" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1453,8 +1451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fu/controller/BookApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+        <state relative-caret-position="116">
+          <caret line="70" column="29" lean-forward="true" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1166#1167#0" expanded="true" />

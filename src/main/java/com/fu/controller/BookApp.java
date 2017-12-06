@@ -68,7 +68,7 @@ public class BookApp {
         bookService.deleteOne(id);
     }
 
-    @PostMapping("/books/by",)
+    @PostMapping("/books/by")
     public List<Book> findBy(@RequestParam String author,
                              @RequestParam int status){
         return bookService.findByAuthorAndStatus(author,status);
