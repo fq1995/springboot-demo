@@ -27,4 +27,7 @@ public interface BookService {
 
     //根据作者和状态查询
     public List<Book> findByAuthorAndStatus(String author, int status);
+
+    //根据描述模糊查询
+    public List<Book> findByDescriptionContains(String des);
 }

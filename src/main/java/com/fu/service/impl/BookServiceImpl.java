@@ -39,6 +39,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<Book> findByDescriptionContains(String des) {
+        return bookRepository.findByDescriptionContains(des);
+    }
+
+    @Override
     public void deleteOne(long id) {
         bookRepository.delete(id);
     }

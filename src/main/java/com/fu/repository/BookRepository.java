@@ -16,4 +16,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     //根据作者和状态查询
     List<Book> findByAuthorAndStatus(String author, int status);
 
+    //根据描述模糊查询
+    List<Book> findByDescriptionContains(String des);
+
 }
