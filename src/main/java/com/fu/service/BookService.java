@@ -24,4 +24,7 @@ public interface BookService {
 
     //根据作者查询
     public List<Book> findByAuthor(String author);
+
+    //根据作者和状态查询
+    public List<Book> findByAuthorAndStatus(String author, int status);
 }

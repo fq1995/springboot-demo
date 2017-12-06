@@ -10,5 +10,10 @@ import java.util.List;
  */
 public interface BookRepository extends JpaRepository<Book, Long> {
 
+    //根据作者查找
     List<Book> findByAuthor(String author);
+
+    //根据作者和状态查询
+    List<Book> findByAuthorAndStatus(String author, int status);
+
 }

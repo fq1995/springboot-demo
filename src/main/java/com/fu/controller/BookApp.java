@@ -3,6 +3,7 @@ package com.fu.controller;
 import com.fu.pojo.Book;
 import com.fu.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -67,9 +68,10 @@ public class BookApp {
         bookService.deleteOne(id);
     }
 
-    @PostMapping("/books/by")
-    public List<Book> findBy(@RequestParam String author){
-        return bookService.findByAuthor(author);
+    @PostMapping("/books/by",)
+    public List<Book> findBy(@RequestParam String author,
+                             @RequestParam int status){
+        return bookService.findByAuthorAndStatus(author,status);
     }
 
 }
