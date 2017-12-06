@@ -21,4 +21,7 @@ public interface BookService {
 
     //删除一条
     public void deleteOne(long id);
+
+    //根据作者查询
+    public List<Book> findByAuthor(String author);
 }
