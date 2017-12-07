@@ -69,9 +69,11 @@ public class BookApp {
     }
 
     @PostMapping("/books/by")
-    public List<Book> findBy(@RequestParam int len){
+    public int findBy(@RequestParam int status,
+                             @RequestParam long id){
 //        return bookService.findByJPQL(len);
-        return bookService.findBySQL(len);
+//        return bookService.findBySQL(len);
+        return bookService.updateByJPQL(status, id);
     }
 
 

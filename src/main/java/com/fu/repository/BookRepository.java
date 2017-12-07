@@ -2,8 +2,10 @@ package com.fu.repository;
 
 import com.fu.pojo.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -27,5 +29,11 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     //自定义sql语句
     @Query(value = "select * from book where length(name)> ?1 ", nativeQuery = true)
     List<Book> findByNativeSQL(int len);
+
+    //更新
+    @Transactional
+    @Modifying
+    @Query("update Book b set b.status = ?1 where id = ?2")
+    int updateByJPQL(int status, long id);
 
 }

@@ -1,6 +1,7 @@
 package com.fu.service;
 
 import com.fu.pojo.Book;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -36,4 +37,8 @@ public interface BookService {
 
     //自定义sql查询
     public List<Book> findBySQL(int len);
+
+    //自定义JPQL更新
+    @Transactional
+    public int updateByJPQL(int status, long id);
 }
