@@ -52,4 +52,14 @@ public class BookServiceImpl implements BookService {
     public List<Book> findByAuthorAndStatus(String author, int status) {
         return bookRepository.findByAuthorAndStatus(author, status);
     }
+
+    @Override
+    public List<Book> findByJPQL(int len) {
+        return bookRepository.findByJPQL(len);
+    }
+
+    @Override
+    public List<Book> findBySQL(int len) {
+        return bookRepository.findByJPQL(len);
+    }
 }

@@ -2,6 +2,7 @@ package com.fu.repository;
 
 import com.fu.pojo.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -18,5 +19,13 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     //根据描述模糊查询
     List<Book> findByDescriptionContains(String des);
+
+    //自定义JPQL查询语句
+    @Query("select b from Book b where length(b.name) > ?1")
+    List<Book> findByJPQL(int len);
+
+    //自定义sql语句
+    @Query(value = "select * from book where length(name)> ?1 ", nativeQuery = true)
+    List<Book> findByNativeSQL(int len);
 
 }

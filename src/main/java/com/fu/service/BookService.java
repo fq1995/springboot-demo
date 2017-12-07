@@ -30,4 +30,10 @@ public interface BookService {
 
     //根据描述模糊查询
     public List<Book> findByDescriptionContains(String des);
+
+    //自定义JPQL查询
+    public List<Book> findByJPQL(int len);
+
+    //自定义sql查询
+    public List<Book> findBySQL(int len);
 }
