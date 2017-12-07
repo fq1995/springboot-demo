@@ -64,7 +64,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public int deleteByJPQL(long id) {
+        return bookRepository.deleteBYJPQL(id);
+    }
+
+    @Override
     public int updateByJPQL(int status, long id) {
         return bookRepository.updateByJPQL(status, id);
     }
+
+
 }

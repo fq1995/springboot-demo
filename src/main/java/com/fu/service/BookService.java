@@ -41,4 +41,8 @@ public interface BookService {
     //自定义JPQL更新
     @Transactional
     public int updateByJPQL(int status, long id);
+
+    //自定义删除
+    @Transactional
+    public int deleteByJPQL(long id);
 }
