@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>书单详情</title>
+</head>
+<body>
+    <div>
+        <p>
+            <strong>书名:</strong>
+            <span th:text="${book.name}"></span>
+        </p>
+        <p>
+            <strong>作者:</strong>
+            <span th:text="${book.author}"></span>
+        </p>
+        <p>
+            <strong>描述:</strong>
+            <span th:text="${book.description}"></span>
+        </p>
+        <p>
+            <strong>状态:</strong>
+            <span th:text="${book.status}"></span>
+        </p>
+    </div>
+</body>
+</html>
