@@ -25,6 +25,9 @@ public class BookController {
     @GetMapping("/books/{id}")
     public String detail(@PathVariable long id, Model model){
         Book book = bookService.findOne(id);
+        if(null == book){
+            book = new Book();
+        }
         model.addAttribute("book", book);
         return "book";
     }

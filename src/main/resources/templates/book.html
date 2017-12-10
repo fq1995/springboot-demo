@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <title>书单详情</title>
 </head>
-<body>
+<body th:object="${book}">
     <div>
         <p>
             <strong>书名:</strong>
-            <span th:text="${book.name}"></span>
+            <span th:text="*{name}"></span>
         </p>
         <p>
             <strong>作者:</strong>
-            <span th:text="${book.author}"></span>
+            <span th:text="*{author}"></span>
         </p>
         <p>
             <strong>描述:</strong>
-            <span th:text="${book.description}"></span>
+            <span th:text="*{description}"></span>
         </p>
         <p>
             <strong>状态:</strong>
-            <span th:text="${book.status}"></span>
+            <span th:text="*{status}"></span>
         </p>
     </div>
 </body>
