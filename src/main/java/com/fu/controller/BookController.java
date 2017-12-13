@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
+
 /**
  * Created by fu on 2017/12/9.
  */
@@ -18,7 +20,9 @@ public class BookController {
     private BookService bookService;
 
     @GetMapping("/books")
-    public String list() {
+    public String list(Model model) {
+        List<Book> bookList = bookService.findAll();
+        model.addAttribute("books", bookList);
         return "books";
     }
 
