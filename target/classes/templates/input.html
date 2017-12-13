@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css" rel="stylesheet">
+    <title>新增书单</title>
+</head>
+<body>
+    <div class="container" style="max-width: 700px;">
+        <h2 class="page-header">新增书单</h2>
+        <div class="well">
+            <form th:action="@{/books}" method="post">
+                <div class="form-group">
+                    <label for="nameId">书名</label>
+                    <input type="text" name="name" id="nameId" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="authorId">作者</label>
+                    <input type="text" name="author" id="authorId" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="descriptionId">描述</label>
+                    <input type="text" name="description" id="descriptionId" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="statusId">状态</label>
+                    <select name="status" id="statusId" class="form-control">
+                        <option value="0">想读</option>
+                        <option value="1">在读</option>
+                        <option value="2">已读</option>
+                    </select>
+                </div>
+                <p class="text-center">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </p>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+<script src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+<script src="../static/js/bootstrap.js" th:src="@{/js/bootstrap.js}"></script>
+</body>
+</html>
