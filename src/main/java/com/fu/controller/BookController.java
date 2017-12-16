@@ -94,4 +94,14 @@ public class BookController {
         }
         return "redirect:/books";
     }
+
+    /**
+     *删除
+     */
+    @GetMapping("/books/delete/{id}")
+    public String delete(@PathVariable long id, final RedirectAttributes attributes){
+        bookService.deleteOne(id);
+        attributes.addFlashAttribute("message","删除成功");
+        return "redirect:/books";
+    }
 }

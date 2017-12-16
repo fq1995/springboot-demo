@@ -4,6 +4,9 @@ spring:
     active: dev
   thymeleaf:
       mode: HTML
+  devtools:
+    restart:
+      trigger-file: .trigger
 
 book:
   name: 我的世界

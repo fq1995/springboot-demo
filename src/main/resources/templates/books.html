@@ -52,7 +52,8 @@
                     <span th:case="*">想读</span>
                 </td>
                 <td>
-                    <a href="#" th:href="@{/books/input/{id}(id=${book.id})}">更新</a>
+                    <a href="#" th:href="@{/books/input/{id}(id=${book.id})}">更&nbsp; 新</a>&nbsp;
+                    <a href="#" th:href="@{/books/delete/{id}(id=${book.id})}">删&nbsp; 除</a>
                 </td>
             </tr>
             </tbody>
