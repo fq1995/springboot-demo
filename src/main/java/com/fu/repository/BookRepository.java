@@ -1,6 +1,8 @@
 package com.fu.repository;
 
 import com.fu.pojo.Book;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -12,6 +14,8 @@ import java.util.List;
  * Created by fu on 2017/12/5.
  */
 public interface BookRepository extends JpaRepository<Book, Long> {
+
+    Page<Book> findAll(Pageable pageable);
 
     //根据作者查找
     List<Book> findByAuthor(String author);

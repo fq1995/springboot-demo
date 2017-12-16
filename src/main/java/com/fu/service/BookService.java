@@ -1,6 +1,8 @@
 package com.fu.service;
 
 import com.fu.pojo.Book;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -13,6 +15,12 @@ public interface BookService {
 
     //查询所有书单列表
     public List<Book> findAll();
+
+    //分页查询
+    public Page<Book> findAllByPage();
+
+    //分页查询
+    public Page<Book> findAllByPage(Pageable pageable);
 
     //提交书单（新增或更新）
     public Book save(Book book);

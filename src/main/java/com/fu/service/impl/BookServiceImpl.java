@@ -4,6 +4,10 @@ import com.fu.pojo.Book;
 import com.fu.repository.BookRepository;
 import com.fu.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -73,5 +77,15 @@ public class BookServiceImpl implements BookService {
         return bookRepository.updateByJPQL(status, id);
     }
 
+    @Override
+    public Page<Book> findAllByPage() {
+        Sort sort = new Sort(Sort.Direction.DESC,"id");
+        Pageable pageable = new PageRequest(1,5,sort);
+        return bookRepository.findAll(pageable);
+    }
 
+    @Override
+    public Page<Book> findAllByPage(Pageable pageable) {
+        return bookRepository.findAll(pageable);
+    }
 }

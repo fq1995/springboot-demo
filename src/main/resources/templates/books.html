@@ -38,7 +38,7 @@
                     first/last: 第一条/最后一条
             -->
 
-            <tr th:each="book,iterStat:${books}" th:class="${iterStat.even} ? 'bg-danger'">
+            <tr th:each="book,iterStat:${page.content}" th:class="${iterStat.even} ? 'bg-danger'">
                 <td th:text="${iterStat.count}">1</td>
                 <!--<td th:text="${iterStat.index}">1</td>-->
                 <td><a th:text="${book.name}" th:href="@{'/books/' + ${book.id}}">我的世界</a></td>
@@ -57,6 +57,12 @@
             </tr>
             </tbody>
         </table>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="#" th:href="@{'/books?page='+${page.number-1}}" th:unless="${page.first}">上一页</a></li>
+                <li class="next"><a href="#" th:href="@{/books(page=${page.number}+1)}" th:unless="${page.last}">下一页</a></li>
+            </ul>
+        </nav>
     </div>
 
 

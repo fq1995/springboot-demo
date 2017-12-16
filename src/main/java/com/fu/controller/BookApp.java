@@ -3,10 +3,10 @@ package com.fu.controller;
 import com.fu.pojo.Book;
 import com.fu.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * Created by fu on 2017/12/5.
@@ -19,9 +19,14 @@ public class BookApp {
     private BookService bookService;
 
     @GetMapping("/books")
-    public List<Book> getAll(){
-
-        return bookService.findAll();
+    /*public Page<Book> getAll(){
+        return bookService.findAllByPage();
+//        return bookService.findAll();
+    }*/
+    public Page<Book> getAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "5") int size){
+        Sort sort = new Sort(Sort.Direction.DESC,"id");
+        return bookService.findAllByPage(new PageRequest(page,size,sort));
+//        return bookService.findAll();
     }
 
     @PostMapping("/books")
